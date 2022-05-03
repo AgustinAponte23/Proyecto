@@ -1,0 +1,24 @@
+:root{
+    --hover: #ffc107;
+}
+
+
+#sidebar-container{
+    min-height: 100vh;
+}
+
+#sidebar-container .menu{
+    width: 18rem;
+   
+}
+
+#sidebar-container .menu a{
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+}
+
+#sidebar-container .menu i{
+    margin-right: 10px;
+    font-size: 20px;
+}

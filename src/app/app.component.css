@@ -1,0 +1,22 @@
+.components {
+    display: grid;
+    grid-template-rows: 1fr 13fr 1fr;
+    grid-template-columns: 2fr 5fr 3fr;
+    grid-template-areas: 
+      "header header header"
+      "aside main main"
+      "aside main main"
+}
+
+.header {
+    grid-area: header;
+
+}
+
+.sidemenu{
+     grid-area: aside;
+}
+
+.content{
+    grid-area: main;
+}
