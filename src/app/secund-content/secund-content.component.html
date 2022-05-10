@@ -1,0 +1,10 @@
+
+ <div class="container-fluid text-center">
+  <h1>Ejercicio</h1>
+
+  <ul *ngFor="let estudiante of estudiantes">
+      <li [ngClass]="estudiante.aprobado == true ? 'aprobados' : 'desaprobados'">
+        {{estudiante.nombre}} tuvo un {{estudiante.nota}} en el curso de {{estudiante.curso | uppercase}}
+      </li>
+  </ul>
+ </div>
