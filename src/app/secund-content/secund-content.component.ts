@@ -27,7 +27,6 @@ export class SecundContentComponent implements OnInit {
       curso:'Vue',
       aprobado: true,
     }
-
   ]
 
   constructor() { }

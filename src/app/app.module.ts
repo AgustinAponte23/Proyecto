@@ -11,6 +11,8 @@ import { SecundContentComponent } from './secund-content/secund-content.componen
 
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { FormComponent } from './form/form.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,16 +23,14 @@ import { HomeComponent } from './home/home.component';
     SidemenuComponent,
     DirectivaDirective,
     SecundContentComponent,
-    HomeComponent
+    HomeComponent,
+    FormComponent
 
   ],
   imports: [
     BrowserModule,
-    //RouterModule.forRoot([
-      //{path:'ejercicio' , component:SecundContentComponent},
-      //{path:'contenido' , component:ContentComponent},
-      //{path:'inicio' , component:HomeComponent}
-     //])
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

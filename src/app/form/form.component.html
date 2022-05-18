@@ -1,0 +1,74 @@
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- "Encabezado" -->
+    <div class="fadeIn first">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="title text-center my-5">​ Crear cuenta GRATIS​</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- "Encabezado final" -->
+
+    <!-- "Login" -->
+    <form [formGroup]="formulario" (ngSubmit)="submit()">
+      <input
+        type="text"
+        id="login"
+        class="fadeIn second"
+        name="login"
+        placeholder="Usuario"
+        formControlName="usuario"
+        required
+      />
+
+      <!--"Alerta required"-->
+      <div
+        *ngIf="formulario.get('usuario')?.errors?.['required']"
+        class="alert alert-danger"
+        role="alert"
+      >
+        Debes colocar un nombre de usuario
+      </div>
+
+      <input
+        type="password"
+        id="password"
+        class="fadeIn third"
+        name="login"
+        placeholder="Contraseña"
+        formControlName="contraseña"
+        required
+      />
+
+      <!--"Alerta required"-->
+      <div
+        *ngIf="formulario.get('contraseña')?.errors?.['required']"
+        class="alert alert-danger"
+        role="alert"
+      >
+        No escribiste tu contraseña
+      </div>
+
+      <!--"Alerta minlength"-->
+      <div
+        *ngIf="formulario.get('contraseña')?.errors?.['minlength']"
+        class="alert alert-danger"
+        role="alert"
+      >
+        La contraseña debe ser mas larga
+      </div>
+
+      <input type="submit" class="fadeIn fourth" value="Crear cuenta" />
+    </form>
+    <!-- "Login final" -->
+
+    <!-- "Crear cuenta" -->
+    <div id="formFooter">
+      <a class="underlineHover">Iniciar sesion</a>
+    </div>
+    <!-- "Crear cuenta final" -->
+  </div>
+</div>
